@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Voting_Page">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+
+            android:contentDescription="Selfie_1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/halloween_selfie_1"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selfie 1"
+            />
+
+        <TextView
+            android:id="@+id/vote_count_1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btn_like_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:layout_margin="8dp"
+            android:onClick="onLikeClicked1"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:contentDescription="Selfie_2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/halloween_selfie_2"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selfie 2"
+            />
+
+        <TextView
+            android:id="@+id/vote_count_2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btn_like_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:layout_margin="8dp"
+            android:onClick="onLikeClicked2"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:contentDescription="Selfie_3"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/halloween_selfie_3"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selfie 3"
+            />
+
+        <TextView
+            android:id="@+id/vote_count_3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btn_like_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:layout_margin="8dp"
+            android:onClick="onLikeClicked3"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:contentDescription="Selfie_4"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/halloween_selfie_4"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selfie 4"
+            />
+
+        <TextView
+            android:id="@+id/vote_count_4"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:layout_marginTop="16dp"
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btn_like_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:layout_margin="8dp"
+            android:onClick="onLikeClicked4"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "213567156788",
+    "firebase_url": "https://snapbattle-c1e58.firebaseio.com",
+    "project_id": "snapbattle-c1e58",
+    "storage_bucket": "snapbattle-c1e58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213567156788:android:2b4d1618136c780a",
+        "android_client_info": {
+          "package_name": "com.example.bren.snapbattle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213567156788-efunv122dcpj80pvd3rsnag8qun128qa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD9eAC8rPuFkPhsdnD62iekLm7kknopAs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
