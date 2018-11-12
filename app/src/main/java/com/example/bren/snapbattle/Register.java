@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class Register extends MainActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
@@ -50,41 +51,47 @@ public class Register extends MainActivity implements View.OnClickListener{
 
 
 
-            if (email.isEmpty()) {
-                editTextEmail.setError("Email is required");
-                editTextEmail.requestFocus();
-                return;
-            }
+        if (email.isEmpty()) {
+            editTextEmail.setError("Email is required");
+            editTextEmail.requestFocus();
+            return;
+        }
 
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                editTextEmail.setError("Please enter a valid email");
-                editTextEmail.requestFocus();
-                return;
-            }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
 
-            if (pass.isEmpty()) {
-                editTextPass.setError("Password is required");
-                editTextPass.requestFocus();
-                return;
+        if (pass.isEmpty()) {
+            editTextPass.setError("Password is required");
+            editTextPass.requestFocus();
+            return;
 
-            }
+        }
 
-            if (pass.length() < 6) {
-                editTextPass.setError("Password needs to be 6 characters");
-                editTextPass.requestFocus();
-                return;
-            }
+        if (pass.length() < 6) {
+            editTextPass.setError("Password needs to be 6 characters");
+            editTextPass.requestFocus();
+            return;
+        }
 
 
-            mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<com.google.firebase.auth.AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<com.google.firebase.auth.AuthResult> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(getApplicationContext(), "User Registered Successful", Toast.LENGTH_SHORT).show();
+        mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<com.google.firebase.auth.AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<com.google.firebase.auth.AuthResult> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(), "User Registered Successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                        Toast.makeText(getApplicationContext(), "This email already exists", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
-            });
-        }
+            }
+        });
+    }
 
 
 
