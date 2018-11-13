@@ -21,6 +21,7 @@
         <activity android:name=".Register"></activity>
         <activity android:name=".Voting_Page"></activity>
         <activity android:name=".Camera"></activity>
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>

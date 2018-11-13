@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Camera extends MainActivity {
-
-    // Button btnCamera =(Button)findViewById(R.id.btnCamera);
-    //ImageView imageView =(ImageView)findViewById(R.id.imageView);
+    
     ImageView imageView;
 
     @Override

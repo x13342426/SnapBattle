@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".Voting_Page">
 
     <LinearLayout
@@ -205,6 +206,8 @@
             android:text="Camera"
             android:id="@+id/Btncamera"
             android:onClick="onButtonClick"
+            android:textColor="@color/white"
+            android:background="@color/transparent"
 
 
             />
