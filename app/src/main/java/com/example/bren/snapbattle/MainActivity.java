@@ -113,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
             userLogin();
 
 
-            Intent i = new Intent(MainActivity.this, Voting_Page.class);
-            startActivity(i);
 
         }
 
