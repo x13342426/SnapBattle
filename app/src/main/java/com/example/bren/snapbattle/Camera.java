@@ -83,6 +83,7 @@ public class Camera extends MainActivity {
         mTextViewShowUploads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                openImagesActivity();
 
             }
         });
@@ -194,5 +195,8 @@ public class Camera extends MainActivity {
         }
 
     }
-
+        private void openImagesActivity(){
+        Intent intent = new Intent(this, UploadView.class);
+        startActivity (intent);
+        }
 }
