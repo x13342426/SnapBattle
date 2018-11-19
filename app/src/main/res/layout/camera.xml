@@ -15,26 +15,64 @@
     <ImageView
 
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_width="400dp"
         android:layout_marginBottom="50dp"
+        android:layout_marginTop="140dp"
+        android:layout_height="250dp"
 
 
 
         />
 
     <Button
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="440dp"
         android:id="@+id/btnCamera"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Open camera"
         android:background="@color/colorPrimaryDark"
+        />
 
+    <Button
+        android:id="@+id/btnFile"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/btnFile"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:text="Choose File" />
 
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tFile"
+        android:hint="Enter file name"
+        android:layout_marginLeft="180dp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUpload"
+        android:text="Upload File"
+        android:onClick="onButtonClick"
+        android:layout_marginTop="60dp"
 
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Uploads"
+        android:id="@+id/tvUpload"
+        android:layout_marginTop="500dp"
+        android:textSize="30dp"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="400dp"/>
 
 </RelativeLayout>
