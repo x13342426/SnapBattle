@@ -21,10 +21,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Voting_Page" />
+        <activity android:name=".voting" />
         <activity android:name=".Camera" />
         <activity android:name=".Profile" />
-        <activity android:name=".UploadView"></activity>
+        <activity android:name=".UploadView" />
+        <activity android:name=".Vote_Basic" />
+        <activity android:name=".Vote_Basic_Activity"></activity>
     </application>
 
 </manifest>

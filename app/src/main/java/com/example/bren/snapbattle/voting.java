@@ -18,20 +18,10 @@ import java.util.List;
 
 public class voting extends MainActivity {
 
-    private int Thumbnail ;
-    List<voting> LstVote;
 
-    public voting(int thumbnail) {
-        Thumbnail = thumbnail;
-    }
+    List<Vote_Basic> LstVote;
 
-    public int getThumbnail() {
-        return Thumbnail;
-    }
 
-    public void setThumbnail(int thumbnail) {
-        Thumbnail = thumbnail;
-    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +29,18 @@ public class voting extends MainActivity {
 
 
         LstVote = new ArrayList<>();
-        LstVote.add(new voting(R.drawable.halloween_selfie_1));
-        LstVote.add(new voting(R.drawable.halloween_selfie_2));
-        LstVote.add(new voting(R.drawable.halloween_selfie_3));
-        LstVote.add(new voting(R.drawable.halloween_selfie_4));
-        LstVote.add(new voting(R.drawable.halloween_selfie_5));
-        LstVote.add(new voting(R.drawable.halloween_selfie_6));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_1,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_2,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_3,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_4,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_5,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_6,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_1,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_2,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_3,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_4,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_5,"Username",0));
+        LstVote.add(new Vote_Basic(R.drawable.halloween_selfie_6,"Username",0));
 
         RecyclerView myview = (RecyclerView) findViewById(R.id.votepage_title_id);
         VotingViewAdapter myAdapter = new VotingViewAdapter(this,LstVote);

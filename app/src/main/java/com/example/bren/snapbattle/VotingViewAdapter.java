@@ -1,6 +1,7 @@
 package com.example.bren.snapbattle;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -17,9 +18,9 @@ public class VotingViewAdapter extends RecyclerView.Adapter<VotingViewAdapter.My
 
 
     private Context mContext ;
-    private List<voting> mVotes;
+    private List<Vote_Basic> mVotes;
 
-    public VotingViewAdapter(Context mContext, List<voting> mVotes) {
+    public VotingViewAdapter(Context mContext, List<Vote_Basic> mVotes) {
         this.mContext = mContext;
         this.mVotes = mVotes;
     }
@@ -36,10 +37,28 @@ public class VotingViewAdapter extends RecyclerView.Adapter<VotingViewAdapter.My
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
 
         myViewHolder.selfie_vote_title.setText(mVotes.get(i).getTitle());
         myViewHolder.selfie_thumnail.setImageResource((mVotes.get(i).getThumbnail()));
+
+        //Set click listener
+
+        myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,Vote_Basic_Activity.class);
+
+                // passing data to the vote_basic_activity
+                intent.putExtra("Title",mVotes.get(i).getTitle());
+                intent.putExtra("Score",mVotes.get(i).getScore());
+                intent.putExtra("Thumbnail",mVotes.get(i).getThumbnail());
+                // start the activity
+                mContext.startActivity(intent);
+
+
+            }
+        });
 
     }
 
@@ -59,6 +78,7 @@ public class VotingViewAdapter extends RecyclerView.Adapter<VotingViewAdapter.My
 
             selfie_vote_title = (TextView) itemView.findViewById(R.id.vote_title_id) ;
             selfie_thumnail = (ImageView) itemView.findViewById(R.id.vote_image_id);
+            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
 }
