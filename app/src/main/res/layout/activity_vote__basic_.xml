@@ -28,15 +28,16 @@
                 android:id="@+id/votethumbnail"/>
 
             <TextView
+                android:id="@+id/voteusername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Username"
-
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/votescore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Score"
