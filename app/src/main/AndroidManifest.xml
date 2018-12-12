@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".voting" />
+        <activity android:name=".Voting" />
         <activity android:name=".Camera" />
         <activity android:name=".Profile" />
         <activity android:name=".UploadView" />

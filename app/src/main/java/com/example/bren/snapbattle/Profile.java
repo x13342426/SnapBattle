@@ -21,7 +21,7 @@ public class Profile extends MainActivity {
 
     public void onButtonClick(View v) {
         if (v.getId() == R.id.Btnvote) {
-            Intent i = new Intent(Profile.this, voting.class);
+            Intent i = new Intent(Profile.this, Voting.class);
             startActivity(i);
         }
         if (v.getId() == R.id.Btnpic) {
