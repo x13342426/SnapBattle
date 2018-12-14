@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +39,9 @@ public class UploadView extends AppCompatActivity {
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot postSnapshot : dataSnapshot.getChildren()){
-                    Upload upload = postSnapshot.getValue(Upload.class);
+
+              for(DataSnapshot postSnapshot : dataSnapshot.getChildren()){
+                 Upload upload = postSnapshot.getValue(Upload.class);
                     mUploads.add(upload);
                 }
             mAdapter = new ImageAdapter(UploadView.this, mUploads);
@@ -55,3 +57,9 @@ public class UploadView extends AppCompatActivity {
 
     }
 }
+
+/* Potential fix =                 Picasso.get(this)
+                        .load(mUploads)  // full uri retrieved from database
+                        .placeholder(R.drawable.logo) //optional
+                        .error(R.drawable.logo) //optional
+                        .into(mRecyclerView); */
