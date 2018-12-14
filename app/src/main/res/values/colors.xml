@@ -8,5 +8,11 @@
     <color name="transparent">#00000000</color>
     <color name="gradStart">#19AA8B</color>
     <color name="gradStop">#23A7D8</color>
+    <color name="colorRed">#ff3943</color>
+    <color name="colorRedDark">#801b20</color>
+    <color name="colorGreenLight">#abffc0</color>
+    <color name="colorGreen">#247b37</color>
+    <color name="colorGreen1">#3eb959</color>
+    <color name="colorWhite">#ffffff</color>
 
 </resources>

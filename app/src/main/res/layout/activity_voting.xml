@@ -4,23 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Voting"
-    android:background="@drawable/voting_background_1"
-    android:padding="8dp">
+    android:padding="8dp"
+    tools:context="Voting">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/votepage_title_id"
+        android:id="@+id/voting_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-
-
-    </android.support.v7.widget.RecyclerView>
-
-
-
-
-
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.bren.snapbattle;
 
 import android.content.Context;
 import android.media.Image;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.net.URI;
 import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
@@ -31,14 +33,19 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ImageViewHolder imageViewHolder, int i) {
-        Upload uploadCurrent = mUploads.get (i);
-        imageViewHolder.textViewName.setText (uploadCurrent.getName ());
+    public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
+        Upload uploadCurrent = mUploads.get (position);
+        holder.textViewName.setText (uploadCurrent.getName ());
         Picasso.get ()
-                .load (uploadCurrent.getImageUrl ())
+                .load (uploadCurrent.getImageUrl())
+                .placeholder(R.drawable.logo)
                 .fit ()
                 .centerCrop ()
-                .into (imageViewHolder.imageView);
+                .into (holder.imageView);
+
+
+
+
 
     }
 
@@ -56,6 +63,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
             textViewName = itemView.findViewById (R.id.text_view_name);
             imageView = itemView.findViewById (R.id.image_view_upload);
+
+
         }
     }
 }

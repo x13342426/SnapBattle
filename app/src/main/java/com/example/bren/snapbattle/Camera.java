@@ -110,18 +110,18 @@ public class Camera extends MainActivity {
 
 
             Uri uri = data.getData();
-            StorageReference filepath = mStorage.child("Photos").child(uri.getLastPathSegment());
+    StorageReference filepath = mStorage.child("Photos").child(uri.getLastPathSegment());
             filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+        @Override
+        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                    Toast.makeText(Camera.this, "Photo uploaded", Toast.LENGTH_SHORT ).show();
-                }
-            });
+            Toast.makeText(Camera.this, "Photo uploaded", Toast.LENGTH_SHORT ).show();
+        }
+    });
 
+}
         }
-        }
-*/
+                */
 
 
     private void openFileChooser() {

@@ -9,6 +9,7 @@
     android:paddingTop="16dp"
     android:orientation="vertical"
     android:weightSum="10"
+    android:background="@drawable/bg"
     tools:context="com.example.bren.snapbattle.MainActivity">
 
 
@@ -31,7 +32,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Open camera"
-        android:background="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_bg"
+        android:textSize="16sp" />
+
+
+
         />
 
     <Button
@@ -40,8 +50,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/btnFile"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
-        android:text="Choose File" />
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:text="Choose File"
+        android:fontFamily="sans-serif-medium"
+        />
 
     <EditText
         android:layout_width="150dp"
@@ -57,6 +70,8 @@
         android:text="Upload File"
         android:onClick="onButtonClick"
         android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
 
         />
 
@@ -66,7 +81,11 @@
         android:text="Show Uploads"
         android:id="@+id/tvUpload"
         android:layout_marginTop="500dp"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="80dp"
+        />
 
     <ProgressBar
         android:layout_width="match_parent"

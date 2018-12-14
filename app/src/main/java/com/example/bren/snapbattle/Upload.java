@@ -1,5 +1,6 @@
 package com.example.bren.snapbattle;
 
+
 public class Upload {
     private String mName;
     private String mImageUrl;
@@ -22,14 +23,14 @@ public class Upload {
     public String getName(){
         return mName;
     }
-
     public void setName(String name){
         mName = name;
     }
+
+
     public String getImageUrl(){
         return mImageUrl;
     }
-
     public void setImageUrl(String imageUrl){
         mImageUrl = imageUrl;
     }

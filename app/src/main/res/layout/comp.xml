@@ -21,65 +21,82 @@
         android:src="@drawable/logo"
         />
 
-    <Button
-        android:id="@+id/Btnpic"
-        android:layout_width="300dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="onButtonClick"
-        android:text="Take picture"
+        android:text="Best of luck on the competitions!"
         android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@color/transparent"
+        android:textSize="15dp"
+        android:onClick="onButtonClick"
+        android:textStyle="italic"
+        />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/nci"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="50dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Take your best picture in NCI and win a coupon courtesy of Fusion cafe"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:background="@color/transparent"
+        android:textSize="15dp"
+        android:onClick="onButtonClick"
+        android:textStyle="italic"/>
 
     <Button
         android:id="@+id/Btnvote"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="onButtonClick"
         android:text="Vote now"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="430dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:background="@drawable/btn_bg"
+        android:onClick="onButtonClick"
 
 
         />
 
     <Button
-        android:id="@+id/Btncomp"
+        android:id="@+id/BtnEnter"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="onButtonClick"
-        android:text="View Competitions"
+        android:text="Enter Competition now"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="490dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:background="@drawable/btn_bg"
+        android:onClick="onButtonClick"
 
 
         />
 
     <Button
-        android:id="@+id/Btnreward"
+        android:id="@+id/BtnHome"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="onButtonClick"
-        android:text="Claim Rewards"
+        android:text="Home"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="550dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:background="@drawable/btn_bg"
+        android:onClick="onButtonClick"
 
 
         />
+
 
 </RelativeLayout>

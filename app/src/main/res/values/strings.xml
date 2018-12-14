@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SnapBattle</string>
+    <string name="positive_popup_text_default">You Have Successfully Won This Competition. Keep It Up See Can You Win More! </string>
+    <string name="positive_popup_title_default">Like A Boss!</string>
+    <string name="negative_popup_text_default">You Did Not Win This Competition. It Was Close Try Again!</string>
+    <string name="negative_popup_title_default">Awwww....Snap</string>
 </resources>
